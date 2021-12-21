@@ -1,10 +1,13 @@
-<h1>Articles</h1>
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1 class="mb-4 text-3xl">Articles</h1>
 
-<%= link_to "New Article", new_article_path, class: "btn btn-primary" %>
+  <ul class="list-disc list-inside mb-5">
+    <% @articles.each do |article| %>
+      <li>
+        <%= link_to article.title, article, class: "no-underline hover:underline text-sky-800" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "New Article", new_article_path, class: "text-lg text-slate-50 bg-blue-500 rounded-md p-2" %>
+</div>

@@ -1,6 +1,10 @@
-<h1><%= @article.title %></h1>
+<div class="container">
+  <h1 class="mb-4 text-3xl"><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
+  <p class="text-lg leading-snug mb-5"><%= @article.body %></p>
 
-<p><%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary" %></p>
-<p><%= button_to "Destroy", article_path(@article), method: :delete, class: "btn btn-danger" %></p>
+  <div class="flex">
+    <%= link_to "Edit", edit_article_path(@article), class: "text-lg text-slate-50 bg-cyan-500 rounded-md p-2 mr-2" %>
+    <%= button_to "Delete", article_path(@article), method: :delete, class: "text-lg text-slate-50 bg-red-500 rounded-md p-2" %>
+  </div>
+</div>
